@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+
+/* ------------------------------------------------------------------------ */
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.container{
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.container>#offid1 {
+	width: 40%;
+}
+.container > #offid1 > #innerid{
+    margin-top: 45px;
+    text-decoration: none;
+    position: absolute;
+    color: black;
+    font-size: 29px;
+    margin-left: 4px;
+    font-weight:bolder;
+}
+.container > #offid1 > #innerid2{
+    margin-top: 57px;
+    text-decoration: none;
+    position: absolute;
+    color: gray;
+    cursor: pointer;
+    font-size: 19px;
+    margin-left: 162px;
+    font-weight: bolder;
+}
+.container > #offid1 > #innerid3{
+    margin-top: 57px;
+    text-decoration: none;
+    position: absolute;
+    color: gray;
+    cursor: pointer;
+    font-size: 19px;
+    margin-left: 22rem;
+    font-weight: bolder; 
+}
+
+.container > #offid1 > #innerid4{
+    margin-top: 57px;
+    text-decoration: none;
+    position: absolute;
+    color: gray;
+    cursor: pointer;
+    font-size: 19px;
+    margin-left: 254px;
+    font-weight: bolder; 
+}
+
+.container > #offid1 > #logoimg {
+    margin-top: -25px;
+    width: 8rem;
+    height: 9rem;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.container > #offid2{
+	width: 30%;
+	display: flex;
+	align-items: center;
+}
+.container > #offid2 > form > button> img{
+    margin-top: -23px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 10px;
+    width: 37px;
+    height: 33px;
+}
+#inputtag{
+    padding-left: 15px;
+    width: 214px;
+    height: 32px;
+    border: 0.5px solid black;
+    border-radius: 7px;
+    margin-top: -6px;
+}
+::placeholder{
+    padding: 10px;
+}
+.container>#offid3{
+	width: 20%;
+	display: flex;
+	align-items: center;
+}
+.container > #offid3 >head3{
+    margin-top: -14px;
+    width: 98px;
+    height: 47px;
+    position: absolute;
+}
+.container > #offid3 >button{
+    
+    width: 98px;
+    height: 47px;
+    position: absolute;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transform: translateX(166px);
+    transition: all 1s;
+}
+.container > #offid3 >button:hover{
+    background-color: gray;
+    color: aliceblue;
+}
+
+/* -------------------------------------------------------- */
+
+.section{
+    height: 34rem;
+    margin-left: 103px;
+    margin-top: 42px;
+    width: 23rem;
+    box-shadow: 14px 32px 56px -28px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.section > .imgsection > img{
+    width: 23rem;
+    height: 16rem;
+    border-radius: 7px;
+}
+.textsection > .heads{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.textsection > .paras{
+    margin: 10px;
+    font-size: 13px;
+    color: gray;
+}
+.textsection > .ano{
+	 overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px;
+    font-size: 16px;
+}
+.anotherbutton{
+    cursor: pointer;
+    width: 98px;
+    border-radius: 7px;
+    height: 35px;
+    margin: 10px;
+    border: 7px;
+    border: none;
+    transition: all 2s;
+}
+.anotherbutton:hover{
+    color: white;
+    background-color: grey;
+}
+/* -------------------------------- */
+.section1{
+    height: 34rem;
+    margin-left: 103px;
+    margin-top: 42px;
+    width: 23rem;
+    box-shadow: 14px 32px 56px -28px black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.section1 > .imgsection1 > img{
+    border-radius: 7px;
+    width: 23rem;
+    height: 16rem;
+}
+.textsection1 > .heads1{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.textsection1 > .paras1{
+    margin: 10px;
+    font-size: 13px;
+    color: gray;
+}
+.textsection1 > .ano1{
+    margin: 10px;
+    font-size: 16px;
+}
+.anotherbutton1{
+    cursor: pointer;
+    width: 98px;
+    height: 35px;
+    margin: 10px;
+    border: 7px;
+    border-radius: 7px;
+    transition: all 2s;
+    border: none;
+}
+.anotherbutton1:hover{
+    color: white;
+    background-color: grey;
+}
+/* --------------------------------- */
+.section2{
+    height: 34rem;
+    margin-left: 103px;
+    margin-top: 42px;
+   	overflow: hidden;
+    width: 23rem;
+    box-shadow: 14px 32px 56px -28px black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.section2 > .imgsection2 > img{
+    border-radius: 7px;
+    width: 23rem;
+    height: 16rem;
+    border-radius: 7px;
+}
+.textsection2 > .heads2{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.textsection2 > .paras2{
+    /* margin-top: -1px; */
+    margin: 10px;
+    font-size: 13px;
+    color: gray;
+}
+.textsection2 > .ano2{
+    margin: 10px;
+    font-size: 16px;
+}
+.anotherbutton2{
+    cursor: pointer;
+    width: 98px;
+    height: 35px;
+    margin: 10px;
+    border: 7px;
+    transition: all 2s;
+    border-radius: 7px;
+    border: none;
+}
+.anotherbutton2:hover{
+    color: white;
+    background-color: grey;
+}
+
+/* ------------------------------ */
+.anothersections{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* Pop Up Window code */
+
+#popupwindow{
+    /* border: 2px solid red; */
+    background-color: white;
+    position: absolute;
+    width: 50vw;
+    border-radius: 10px;
+    height: 90vh;
+    top: 30px;
+    left: 23rem;
+    box-shadow: 0px 10px 33px 2px;
+    /* filter: blur(10px); */
+}
+#fixbutton > a{
+    position: fixed;
+    right: 30px;
+    bottom:40px;
+    z-index: 10;
+}
+#popupwindow > #imagecon{
+    /* border: 2px solid firebrick; */
+    /* margin: auto; */
+    /* align-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: inline-block; */
+}
+    
+#fixbutton > a > img{
+    width: 60px;
+    height: 60px;
+}
+
+#popupwindow > #imagecon > img{
+
+    width: 100px;
+    height: 100px;
+
+}
+
+#innerform {
+    /* border: 2px solid red; */
+    width: 45rem;
+    position: relative;
+    left: 18px;
+}
+
+
+#innerform > form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+#innerform > form > label{
+    font-size: 20px;
+}
+#innerform > form > input{
+    font-size: 20px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+#innerform > form >button{
+    font-size: 20px;
+    height: 35px;
+    margin-top: 24px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 10px 33px 2px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: all 2s;
+}
+#innerform > form >button:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    
+}
+#innerform > form > textarea{
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+#popupwindow{display: none;}
+/* #container1{
+    filter: blur(10px);
+}
+#container2{
+    filter: blur(10px);
+} */
+
+
+
+/* BlogInsert CSS */
+.maincontainer{
+    width: 100vw;
+    height: 100vh;
+    /* border: 2px solid red; */
+}
+
+.container1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    /* border: 2px solid green; */
+    
+}
+
+
+.container1 > a >img{
+    margin-top: 40px;
+    width: 150px;
+    height: 150px;
+    /* border: 2px solid firebrick; */
+}
+.container2{
+    width: 50vw;
+    /* border: 2px solid mediumaquamarine; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    
+}
+.container2 > #second{
+    height: 54px;
+}
+.container2 > label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.container2 > input{
+    font-size: 20px;
+    height: 30px;
+}
+.container2 > textarea{
+    font-size: 20px;
+    /* height: 30px; */
+}
+.container2 > button{
+    margin-top: 20px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 22px 2px;
+    margin-bottom: 20px;
+    transition: all 2s;
+}
+.container2 > button:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.submain{
+    /* border: 2px solid navy; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container2 > label{
+    margin-top: 30px;
+}

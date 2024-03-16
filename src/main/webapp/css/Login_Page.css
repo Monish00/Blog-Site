@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+/*------------------------------------------------ */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+.same{
+    margin-left: 395px;
+}
+form > #main{
+    margin-top: 30px;
+}
+#container{
+    margin-top: 160px;
+}
+
+#supermain{
+    height:760px;
+}
+#container > #log{
+    display: flex;
+    width: 54%;
+    align-items: center;
+    justify-content: center;
+}
+#supermain > form > #main >  #inputs{
+    margin-left: 50px;
+}
+#supermain > form > #main >  #inputs > input{
+    width: 501px;
+    padding-left: 30px;
+    box-shadow: -3px 7px 33px -11px;
+    font-size: 20px;
+    margin-top: 20px;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+} 
+#container > #log > img{
+    width: 120px;
+    height: 120px;
+}
+#container > #log > h2{
+    font-size: 40px;
+    margin-top: 10px;
+}
+#btn{
+    margin-top: 35px;
+    width: 54%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn > button{
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    border-radius: 7px;
+    width: 100px;
+    height: 50px;
+    transition: all 2s;
+}
+
+#btn > button:hover{
+    background-color: rgb(88, 88, 255);
+    color: white;
+}
+#indigation > p{
+    width: 53%;
+    font-size: 17px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#indigation > p > a{
+    margin-left: 10px;
+    text-decoration: none;
+}
