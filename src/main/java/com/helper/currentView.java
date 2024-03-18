@@ -15,7 +15,7 @@ public class currentView {
 		 Blog bl = null;
 		 if(blog != null)
 	        for (Blog b : blog) {
-	            if (b.id == id) {
+	            if (b.getId() == id) {
 	                bl = b;
 	                break; 	            }
 	        }

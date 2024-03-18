@@ -68,5 +68,22 @@
     <servlet-name>blogDispatcher</servlet-name>
     <url-pattern>/blogDispatcher</url-pattern>
   </servlet-mapping>  
+    <servlet>
+     <servlet-name>logout</servlet-name>
+     <servlet-class>com.servlets.LogoutServlet</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>  
+   <servlet>
+     <servlet-name>deleteBlog</servlet-name>
+     <servlet-class>com.servlets.DeleteBlog</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>deleteBlog</servlet-name>
+    <url-pattern>/deleteBlog</url-pattern>
+  </servlet-mapping> 
 </web-app>

@@ -1,9 +1,8 @@
 
-<%@page import="com.helper.CurrentUser"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.*"%>
-<%@ page import="com.models.Blog, com.models.User, jakarta.servlet.http.HttpSession"%>
+<%@ page import="com.models.Blog, com.models.User"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +16,9 @@
 <body>
 	<%
     List<Blog> data = (List<Blog>)request.getAttribute("data");
-    System.out.println(data.size());
     User user = null;
     try{
-    user = CurrentUser.getUser();
+    	user = (User) session.getAttribute("user");
     }
     catch(Exception e){	
     }
@@ -67,19 +65,19 @@
 				<img src="./assets/images/sampleimg.jpeg" alt="">
 			</div>
 			<div class="textsection">
-				<div class="heads"><%= s.title %></div>
-				<div class="paras"><%= s.desc %></div>
+				<div class="heads"><%= s.getTitle() %></div>
+				<div class="paras"><%= s.getDesc() %></div>
 				<div class="ano">
 				<% 
-				  if(s.content !=null && s.content.length()>100){
+				  if(s.getContent() !=null && s.getContent().length()>100){
 				%>
-				<%=s.content.substring(0,100) %>
+				<%=s.getContent().substring(0,100) %>
 				<% }else {%>
-				<%=s.content %>
+				<%=s.getContent() %>
 				<%}
 				%>
 				</div>
-				<a href="blogDispatcher?id=<%=s.id%>" ><button  class="anotherbutton">Read More</button></a>
+				<a href="blogDispatcher?id=<%=s.getId()%>" ><button  class="anotherbutton">Read More</button></a>
 			</div>
 		</div>
 		 <% } %>
@@ -87,10 +85,8 @@
 	<% } %>
     <script>
         function logOut() {
-        	<%
-         	 // CurrentUser.setUser(null);
-        	%>
-        	window.location.href = 'displayDetails';
+      
+        	window.location.href = './logout';
         }
     </script>	
 </body>

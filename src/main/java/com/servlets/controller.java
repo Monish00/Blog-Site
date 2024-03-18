@@ -1,9 +1,11 @@
 package com.servlets;
 import java.io.IOException;
 import java.util.List;
+import java.util.Timer;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.JDBC.BlogDB;
-import com.helper.CurrentUser;
+import com.helper.OldTagManager;
 import com.helper.currentView;
 import com.models.Blog;
 import com.models.User;
@@ -17,14 +19,21 @@ import jakarta.servlet.http.HttpSession;
 
 public class controller extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if(!OldTagManager.isStarted.get()) {
+			System.out.println(OldTagManager.isStarted.get());
+			OldTagManager.isStarted = new AtomicBoolean(true);
+			OldTagManager task = new OldTagManager();
+			Timer timer = new Timer();
+	        timer.schedule(task, 0, 24*60*60 * 1000);
+	        System.out.println("Timer Started");
+		}
+		
 		BlogDB db = new BlogDB();
 		User user = null;
 		boolean myBlog = false;
+		HttpSession session = request.getSession();
 		try {
-			user = CurrentUser.getUser();
-			HttpSession session = request.getSession();
-			User u = (User)session.getAttribute("user");
-			System.out.println(u);
+			user = (User)session.getAttribute("user");
 			System.out.println(user);
 			if (user == null) {
 				response.sendRedirect("html/Login_Page.jsp");
@@ -45,7 +54,7 @@ public class controller extends HttpServlet{
 		}
 		else {
 			System.out.println("nr");
-			rs= db.getAllValues();
+			rs= db.getAllValues(user);
 			currentView.setBlog(rs);
 			request.setAttribute("data", rs);
 		}
@@ -56,10 +65,10 @@ public class controller extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String action = req.getParameter("action");
 		BlogDB db = new BlogDB();
+		HttpSession session = req.getSession();
 		User user = null;
 		try {
-			user = CurrentUser.getUser();
-			System.out.println(user.getName());
+			user = (User)session.getAttribute("user");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -88,9 +97,9 @@ public class controller extends HttpServlet{
 			if(action.equals("update")) {
 				String title = req.getParameter("title");
 				String desc = req.getParameter("desc");
-				String content = req.getParameter("content");
+				String content = req.getParameter("bcontent");
 				int bid = Integer.parseInt(req.getParameter("id"));
-
+				System.out.println(content);
 				int aid = user.getId();
 				Blog blog = new Blog(bid,title,desc,content,aid);
 				int a = db.updateBlog(blog);
@@ -98,7 +107,7 @@ public class controller extends HttpServlet{
 			}
 			System.out.println(action);
 		}
-		List<Blog> rs = db.getAllValues();
+		List<Blog> rs = db.getAllValues(user);
 		req.setAttribute("data", rs);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, res);

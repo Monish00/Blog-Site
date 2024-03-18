@@ -3,7 +3,6 @@ package com.servlets;
 import java.io.IOException;
 
 import com.JDBC.UserDB;
-import com.helper.CurrentUser;
 import com.models.User;
 
 import jakarta.servlet.RequestDispatcher;
@@ -29,10 +28,11 @@ public class Login extends HttpServlet {
                 request.setAttribute("message", "User not found !!");
                 dispatcher.forward(request, response);
             } else {
-            	CurrentUser.setUser(user);
-                System.out.println(user.getName());
+//            	CurrentUser.setUser(user);
+                
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
+                System.out.println(user.getName());
                 request.setAttribute("message", "logged in success");
                 response.sendRedirect("displayDetails");
             }
